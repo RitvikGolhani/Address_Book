@@ -26,6 +26,9 @@ public class Main {
             Contact c2 = new Contact(firstName, lastName, city, state, phoneNumber, email);
             a1.add(c2);
         }
+        System.out.println("Enter the name of contact you want to edit details");
+        String name=sc.nextLine();
+        a1.editContact(name);
         a1.display();
 
 
