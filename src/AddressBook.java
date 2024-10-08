@@ -58,4 +58,9 @@ public class AddressBook {
             }
         }
     }
+
+    public void deleteContact(String name) {
+        a.removeIf(c -> c.getFirstName().equalsIgnoreCase(name));
+        System.out.println("Contact(s) with name '" + name + "' deleted.");
+    }
 }

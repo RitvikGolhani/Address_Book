@@ -26,9 +26,20 @@ public class Main {
             Contact c2 = new Contact(firstName, lastName, city, state, phoneNumber, email);
             a1.add(c2);
         }
-        System.out.println("Enter the name of contact you want to edit details");
-        String name=sc.nextLine();
-        a1.editContact(name);
+        System.out.println("Do you want to edit a contact? (yes/no)");
+        String editResponse = sc.nextLine();
+        if (editResponse.equalsIgnoreCase("yes")) {
+            System.out.println("Enter the name of the contact you want to edit:");
+            String name = sc.nextLine();
+            a1.editContact(name);
+        }
+        System.out.println("Do you want to delete a contact? (yes/no)");
+        String deleteResponse = sc.nextLine();
+        if (deleteResponse.equalsIgnoreCase("yes")) {
+            System.out.println("Enter the name of the contact you want to delete:");
+            String nameToDelete = sc.nextLine();
+            a1.deleteContact(nameToDelete);
+        }
         a1.display();
 
 
