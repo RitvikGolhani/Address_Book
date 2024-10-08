@@ -12,19 +12,23 @@ public class Main {
 
         a1.add(c1);
         Scanner sc=new Scanner(System.in);
-        System.out.println("you wanna enter the contact yes/no");
-        String response=sc.nextLine();
-        if(response.equalsIgnoreCase("yes")) {
+        String addMore = "yes";
 
-            System.out.println("Enter fistname lastName,city,state,email,phonenumber");
+        while (addMore.equalsIgnoreCase("yes")) {
+            System.out.println("Enter firstName, lastName, city, state, email, phoneNumber:");
             String firstName = sc.nextLine();
             String lastName = sc.nextLine();
             String city = sc.nextLine();
             String state = sc.nextLine();
             String email = sc.nextLine();
             int phoneNumber = sc.nextInt();
+            sc.nextLine(); // Consume the newline left by nextInt()
+
             Contact c2 = new Contact(firstName, lastName, city, state, phoneNumber, email);
             a1.add(c2);
+
+            System.out.println("Do you want to add another contact? (yes/no)");
+            addMore = sc.nextLine();
         }
         System.out.println("Do you want to edit a contact? (yes/no)");
         String editResponse = sc.nextLine();
