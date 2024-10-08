@@ -7,7 +7,7 @@ public class Main {
         Map<String, AddressBook> addressBooks = new HashMap<>();
         Scanner sc = new Scanner(System.in);
 
-        String ResponseToCreateBook = "yes"; // Control variable for the loop
+        String ResponseToCreateBook = "yes";
 
         while (ResponseToCreateBook.equalsIgnoreCase("yes")) {
             System.out.println("Do you want to create a new Address Book? (yes/no)");
@@ -34,7 +34,7 @@ public class Main {
             if (addressBooks.containsKey(addressBookName)) {
                 AddressBook AddressBook = addressBooks.get(addressBookName);
 
-                String addMore = "yes"; // Control variable for adding contacts
+                String addMore = "yes";
 
                 while (addMore.equalsIgnoreCase("yes")) {
                     System.out.println("Enter firstName, lastName, city, state, email, phoneNumber:");
@@ -44,7 +44,7 @@ public class Main {
                     String state = sc.nextLine();
                     String email = sc.nextLine();
                     int phoneNumber = sc.nextInt();
-                    sc.nextLine(); // Consume the newline left by nextInt()
+                    sc.nextLine();
 
                     Contact c2 = new Contact(firstName, lastName, city, state, phoneNumber, email);
                     AddressBook.add(c2);
