@@ -11,7 +11,21 @@ public class Main {
         AddressBook a1 = new AddressBook();
 
         a1.add(c1);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("you wanna enter the contact yes/no");
+        String response=sc.nextLine();
+        if(response.equalsIgnoreCase("yes")) {
 
+            System.out.println("Enter fistname lastName,city,state,email,phonenumber");
+            String firstName = sc.nextLine();
+            String lastName = sc.nextLine();
+            String city = sc.nextLine();
+            String state = sc.nextLine();
+            String email = sc.nextLine();
+            int phoneNumber = sc.nextInt();
+            Contact c2 = new Contact(firstName, lastName, city, state, phoneNumber, email);
+            a1.add(c2);
+        }
         a1.display();
 
 
