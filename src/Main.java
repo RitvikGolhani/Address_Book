@@ -6,7 +6,13 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        Contact c1 = new Contact("Ritvik", "Golhani","BLR","KRTK",123,"aaaaaaaaaaaa");
 
+        AddressBook a1 = new AddressBook();
+
+        a1.add(c1);
+
+        a1.display();
 
 
     }
